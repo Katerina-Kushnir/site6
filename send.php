@@ -1,10 +1,10 @@
 <?php
 
 //В переменную $token нужно вставить токен, который нам прислал @botFather
-$token = "5463707434:AAHZm3BWcC48PI_uwCOwf9ev08FAhTcVSI4";
+$token = "";
 
 //Сюда вставляем chat_id
-$chat_id = "-743439630";
+$chat_id = "";
 
 //Определяем переменные для передачи данных из нашей формы
 if ($_POST['act'] == 'order') {
@@ -24,7 +24,7 @@ if ($_POST['act'] == 'order') {
     };
 
 //Передаем данные боту
-    $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
+    $sendToTelegram = fopen("https://api.telegram.org/bot","r");
 
 //Выводим сообщение об успешной отправке
     if ($sendToTelegram) {
